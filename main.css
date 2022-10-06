@@ -1,0 +1,156 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0d1a2d;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+section {
+    width: 350px;
+    height: 600px;
+    background-color: #15273f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.img::before {
+    content: url(images/icon-view.svg);
+    background-color: #0194a466;
+    position: absolute;
+    z-index: 2;
+    top: 25%;
+    width: 300px;
+    height: 174px;
+    padding-top: 126px;
+    transform: translateY(-43%);
+    text-align: center;
+    border-radius: 15px;
+    display: none;
+}
+
+.img:hover::before {
+    display: block;
+    cursor: pointer;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+h1 {
+    width: 300px;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+h1:hover {
+    color: #00fdfb;
+}
+
+p {
+    width: 300px;
+    margin-top: 20px;
+    font-size: 19px;
+    color: #f0f0f09e;
+    font-weight: lighter;
+    line-height: 1.2;
+}
+
+.price-line {
+    width: 300px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #30425a;
+    padding-bottom: 20px;
+}
+
+.price-line b {
+    position: relative;
+    font-size: 18px;
+    color: #00fdfb;
+}
+
+.price-line b::before {
+    content: url(images/icon-ethereum.svg);
+    margin-right: 10px;
+}
+
+.price-line span {
+    color: #85a6cf;
+}
+
+.price-line span::before {
+    content: url(images/icon-clock.svg);
+    margin-right: 10px;
+    height: 100%;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    margin-right: 15px;
+}
+
+footer {
+    width: 300px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    width: unset;
+    margin-top: 0;
+}
+
+footer p a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p a:hover {
+    color: #00fdfb;
+}
+
+
+.attribution {
+    position: absolute;
+    color: hsl(228, 45%, 44%);
+    font-size: 11px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+@media (max-height: 680px) {
+    .attribution {
+        display: none;
+    }
+}
